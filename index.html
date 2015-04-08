@@ -39,6 +39,7 @@
       <a href="#social" data-target="#slide-4-container"><i class="fa fa-circle-o"></i></a>
     </div>
     <p id="copyright">Copyright &copy;2015 Discovery Communications. All Rights Reserved. <a href="#">Privacy Policy</a>  |  <a href="#">Terms of Use</a>  |  <a href="#">Legal Disclaimers</a></p>
+    <a name="home"></a>
     <div class="container-fluid full-height gradient" id="slide-1-container">
       <div id="footer-left"></div>
       <div id="footer-right"></div>
@@ -55,7 +56,7 @@
           <div class="col-lg-5 donation-promise">
             <p><strong>Velocity will <span class="blue">donate $1 to MADD</span></strong> for every pledge to end drunk, drugged and distracted driving.*</p>
             <div class="pledge">
-              <a href="#pledge"><img src="images/take_the_pledge.png" title="Take the Pledge"></a>
+              <a href="#pledge" class="anchor" data-target="#slide-3-container"><img src="images/take_the_pledge.png" title="Take the Pledge"></a>
               <div class="driver-count">
                 <p><span class="blue">12,463</span> Smart Drivers</p>
               </div>
@@ -104,6 +105,7 @@
       <div class="footer"></div>
     </div>
 
+    <a name="velocity"></a>
     <div class="container-fluid full-height blue-background" id="slide-2-container">
       <div class="container full-height" id="slide-2">
         <div class="row">
@@ -114,13 +116,14 @@
             <p class="large">Velocity is committed to <strong>driving smart</strong> and eradicating drunk, drugged and distracted driving.</p>
             <p class="small">As America's most car, bike and driver-obsessed cable network, Velocity is 100% committed to eradicating the 3D’s from our nation's highways and byways. The only way to drive safely is focused and sober. In a word, smart. If you agree, please pledge to Drive Smart. For your benefit and for the well being of drivers everywhere.</p>
             <p class="text-center">
-              <a href="#pledge"><img src="images/take_the_pledge_blue.png" title="Take the Pledge"></a>
+              <a href="#pledge" class="anchor" data-target="#slide-3-container"><img src="images/take_the_pledge_blue.png" title="Take the Pledge"></a>
             </p>
           </div>
         </div>
       </div>
     </div>
 
+    <a name="pledge"></a>
     <div class="container-fluid full-height grey-background" id="slide-3-container">
       <div class="container" id="slide-3">
         <h1 class="text-center">I pledge to Drive Smart</h1>
@@ -198,6 +201,7 @@
       </div>
     </div>
 
+    <a name="social"></a>
     <div class="container-fluid gradient" id="slide-4-container">
       <div class="text-center social-header">
         <div class="header-body">
@@ -252,6 +256,11 @@
         }, 5000);
 
         $(".sidebar-dots").on('click','a',function(e){
+          e.preventDefault();
+          $('html, body').animate({scrollTop: $($(this).data('target')).offset().top}, 500);
+        });
+
+        $(".anchor").click(function(e){
           e.preventDefault();
           $('html, body').animate({scrollTop: $($(this).data('target')).offset().top}, 500);
         });
