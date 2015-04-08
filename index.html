@@ -40,7 +40,7 @@
     </div>
     <p id="copyright">Copyright &copy;2015 Discovery Communications. All Rights Reserved. <a href="#">Privacy Policy</a>  |  <a href="#">Terms of Use</a>  |  <a href="#">Legal Disclaimers</a></p>
     <a name="home"></a>
-    <div class="container-fluid full-height gradient" id="slide-1-container">
+    <div class="container-fluid full-height gradient snap" id="slide-1-container">
       <div id="footer-left"></div>
       <div id="footer-right"></div>
       <div class="container full-height" id="slide-1">
@@ -106,7 +106,7 @@
     </div>
 
     <a name="velocity"></a>
-    <div class="container-fluid full-height blue-background" id="slide-2-container">
+    <div class="container-fluid full-height blue-background snap" id="slide-2-container">
       <div class="container full-height" id="slide-2">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
@@ -124,7 +124,7 @@
     </div>
 
     <a name="pledge"></a>
-    <div class="container-fluid full-height grey-background" id="slide-3-container">
+    <div class="container-fluid full-height grey-background snap" id="slide-3-container">
       <div class="container" id="slide-3">
         <h1 class="text-center">I pledge to Drive Smart</h1>
         <div class="row breathe-top">
@@ -202,7 +202,7 @@
     </div>
 
     <a name="social"></a>
-    <div class="container-fluid gradient" id="slide-4-container">
+    <div class="container-fluid gradient snap" id="slide-4-container">
       <div class="text-center social-header">
         <div class="header-body">
           <h1 class="blue">#DriveSmart</h1>
@@ -216,6 +216,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="stylesheets/bootstrap.min.js"></script>
+    <script src="stylesheets/jquery.scrollstop.min.js"></script>
+    <script src="stylesheets/jquery.easing.min.js"></script>
+    <script src="stylesheets/jquery.scrollsnap.min.js"></script>
     <script type="text/javascript">
       $(function(){
         var updateFullHeightContainers = function(){
@@ -228,6 +231,7 @@
         $(window).resize(function(){
           updateFullHeightContainers();
         });
+        $(document).scrollsnap({ snaps:'.snap', proximity: Math.floor($(window).height()*0.1) });
 
         /* Form */
         $("#form-submit").click(function(e){
