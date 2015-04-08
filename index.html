@@ -116,7 +116,7 @@
     </div>
 
     <div class="container-fluid full-height grey-background" id="slide-3-container">
-      <div class="container" id="slide-3" style="display:none;">
+      <div class="container" id="slide-3">
         <h1 class="text-center">I pledge to Drive Smart</h1>
         <div class="row breathe-top">
           <div class="col-md-5 col-md-offset-1 center-line padding-right">
@@ -164,7 +164,7 @@
         <p class="disclaimer text-center">*Velocity will donate $1 to MADD for each pledge up to $10,000.</p>
         <p class="text-center breathe-top"><a href="#" id="form-submit"><img src="images/pledge_button.png" title="I want to pledge!"></a></p>
       </div>
-      <div class="container" id="slide-3-thanks">
+      <div class="container" id="slide-3-thanks" style="display:none;">
         <div class="row">
           <div class="col-md-6 col-md-offset-3">
             <p class="text-center">
@@ -202,6 +202,14 @@
         updateFullHeightContainers();
         $(window).resize(function(){
           updateFullHeightContainers();
+        });
+
+        /* Form */
+        $("#form-submit").click(function(e){
+          e.preventDefault();
+          $("#slide-3").fadeOut(400, function(){
+            $("#slide-3-thanks").fadeIn();
+          });
         });
 
         setInterval(function(){
