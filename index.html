@@ -191,6 +191,19 @@
         </div>
       </div>
     </div>
+
+    <div class="container-fluid gradient" id="slide-4-container">
+      <div class="text-center social-header">
+        <div class="header-body">
+          <h1 class="blue">#DriveSmart</h1>
+          <h2>Tell us why you drive smart.</h2>
+        </div>
+      </div>
+      <div id="social-container">
+        <div class="mr-space" id="mr-space_vel-drivesmart-social" data-space-id="discovery-communications/vel-drivesmart-social" style="min-height: 500px;"></div>
+      </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="stylesheets/bootstrap.min.js"></script>
     <script type="text/javascript">
@@ -198,6 +211,8 @@
         var updateFullHeightContainers = function(){
           var winHeight = $(window).height();
           $(".full-height").css({'height':winHeight});
+          $("#slide-4-container .social-header").height(winHeight*0.4);
+          //$("#social-container").height(winHeight*0.6);
         };
         updateFullHeightContainers();
         $(window).resize(function(){
@@ -229,6 +244,8 @@
             });
           }
         }, 5000);
+
+        !function(a,b,c,d,e,f,g,h,i,j,k){h=a[d]=a[d]||{},h.ui=h.ui||[],i=a[e]=a[e]||{},i[f]||(j=b.getElementsByTagName(c)[0],k=b.createElement(c),k.src="//platform.massrelevance.com/js/massrel.js",j.parentNode.insertBefore(k,j),i[f]=function(){h.ui.push([].slice.call(arguments))}),i[f]("load",{el:b.getElementById(g)})}(window,document,"script","massrel","spredfast","exp","mr-space_vel-drivesmart-social");
       });
     </script>
   </body>
