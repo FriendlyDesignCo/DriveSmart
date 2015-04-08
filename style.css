@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'montserratlight';
+  src: url("fonts/Montserrat-Light-webfont.eot");
+  src: url("fonts/Montserrat-Light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/Montserrat-Light-webfont.woff2") format("woff2"), url("fonts/Montserrat-Light-webfont.woff") format("woff"), url("fonts/Montserrat-Light-webfont.ttf") format("truetype"), url("fonts/Montserrat-Light-webfont.svg#montserratlight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 body {
   font-family: 'Montserrat',sans-serif;
   color: #ebebeb; }
@@ -105,7 +111,9 @@ footer {
   position: relative;
   min-height: 900px; }
   #slide-1 .logos {
-    margin-top: 60px; }
+    margin-top: 60px;
+    position: relative;
+    z-index: 10; }
     #slide-1 .logos li {
       list-style: none;
       float: left;
@@ -118,6 +126,7 @@ footer {
     #slide-1 .logos li + li {
       margin-left: 30px; }
   #slide-1 .donation-promise {
+    font-family: 'montserratlight', sans-serif;
     font-size: 32px;
     padding-top: 110px;
     padding-left: 40px;
@@ -139,6 +148,7 @@ footer {
     #slide-1 .driver-count p {
       margin-bottom: 0; }
   #slide-1 .disclaimer {
+    font-family: 'montserratlight', sans-serif;
     color: #ebebeb;
     font-size: 12px;
     opacity: 0.3;
@@ -210,7 +220,10 @@ footer {
     transform: translateY(-50%); }
   #slide-2 p.large {
     font-size: 44px;
-    color: #fff; }
+    color: #fff;
+    font-family: 'montserratlight', sans-serif; }
+    #slide-2 p.large strong {
+      font-family: 'Montserrat', sans-serif; }
   #slide-2 p.small {
     font-size: 18px;
     color: #fff; }
@@ -227,6 +240,7 @@ footer {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  font-family: 'montserratlight', sans-serif;
   font-size: 28px; }
   #slide-3 .breathe-top {
     margin-top: 40px; }
@@ -234,14 +248,18 @@ footer {
     font-size: 56px;
     margin-top: 0; }
   #slide-3 .blue {
-    color: #219bd1; }
-  #slide-3 .center-line {
-    border-right: 1px solid #fff; }
-  #slide-3 .padding-right {
-    padding-right: 60px; }
-  #slide-3 .padding-left {
-    padding-left: 60px; }
+    color: #219bd1;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold; }
+  @media screen and (min-width: 991px) {
+    #slide-3 .center-line {
+      border-right: 1px solid #fff; }
+    #slide-3 .padding-right {
+      padding-right: 60px; }
+    #slide-3 .padding-left {
+      padding-left: 60px; } }
   #slide-3 label {
+    font-family: 'montserratlight', sans-serif;
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 100; }
@@ -273,6 +291,7 @@ footer {
     font-size: 12px; }
 
 #slide-3-thanks {
+  font-family: 'montserratlight', sans-serif;
   min-height: 680px;
   position: relative;
   top: 50%;
@@ -311,14 +330,15 @@ footer {
     font-size: 14px; }
     #slide-3-thanks .sponsors a {
       color: #279cd1; }
-    #slide-3-thanks .sponsors .center-line {
-      border-right: 1px solid #6d6d6d; }
-    #slide-3-thanks .sponsors .padding-right {
-      padding-right: 50px; }
-    #slide-3-thanks .sponsors .padding-left {
-      padding-left: 50px; }
-    #slide-3-thanks .sponsors .padding-top {
-      padding-top: 18px; }
+    @media screen and (min-width: 991px) {
+      #slide-3-thanks .sponsors .center-line {
+        border-right: 1px solid #6d6d6d; }
+      #slide-3-thanks .sponsors .padding-right {
+        padding-right: 50px; }
+      #slide-3-thanks .sponsors .padding-left {
+        padding-left: 50px; }
+      #slide-3-thanks .sponsors .padding-top {
+        padding-top: 18px; } }
     #slide-3-thanks .sponsors p + p {
       margin-top: 30px; }
 
@@ -339,6 +359,10 @@ footer {
         font-size: 80px;
         font-weight: bold;
         color: #0997ce; }
+      #slide-4-container .social-header .header-body h2 {
+        font-family: 'montserratlight', sans-serif;
+        font-size: 24px;
+        margin-top: 0; }
   #slide-4-container #social-container {
     padding-bottom: 96px;
     overflow-y: scroll; }
