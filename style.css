@@ -116,10 +116,12 @@ footer {
     z-index: 10; }
     #slide-1 .logos li {
       list-style: none;
-      float: left;
       height: 176px;
       position: relative;
       width: 222px; }
+      @media screen and (min-width: 769px) {
+        #slide-1 .logos li {
+          float: left; } }
       #slide-1 .logos li img {
         position: absolute;
         bottom: 0; }
@@ -186,6 +188,9 @@ footer {
     font-weight: 300; }
     #slide-1 #talent-quote.offscreen {
       right: -30px; }
+    @media screen and (max-width: 768px) {
+      #slide-1 #talent-quote p {
+        display: none; } }
     #slide-1 #talent-quote cite {
       color: #7b7b7b;
       font-size: 18px;

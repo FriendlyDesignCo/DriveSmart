@@ -141,7 +141,9 @@ footer {
     z-index:10;
     li {
       list-style:none;
-      float:left;
+      @media screen and (min-width:769px) {
+        float:left;
+      }
       height:176px;
       position:relative;
       width:222px;
@@ -234,6 +236,11 @@ footer {
     font-family: 'Roboto Slab', serif;
     font-weight:300;
 
+    @media screen and (max-width:768px) {
+      p {
+        display:none;
+      }
+    }
     cite {
       color:#7b7b7b;
       font-size:18px;
