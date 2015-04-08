@@ -423,3 +423,21 @@ footer {
 .form-control {
   border-radius:0;
 }
+
+.sidebar-dots {
+  position:fixed;
+  right:0;
+  top:40%;
+  height:100%;
+  width:3%;
+  background:transparent;
+  z-index:999;
+  a {
+    color:#fff;
+  }
+  i {
+    display:block;
+    margin-bottom:5px;
+    opacity:0.3;
+  }
+}

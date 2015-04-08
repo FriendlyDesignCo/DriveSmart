@@ -32,6 +32,12 @@
         </div>
       </div>
     </footer>
+    <div class="sidebar-dots">
+      <a href="#home" data-target="#slide-1-container"><i class="fa fa-circle-o"></i></a>
+      <a href="#velocity" data-target="#slide-2-container"><i class="fa fa-circle-o"></i></a>
+      <a href="#pledge" data-target="#slide-3-container"><i class="fa fa-circle-o"></i></a>
+      <a href="#social" data-target="#slide-4-container"><i class="fa fa-circle-o"></i></a>
+    </div>
     <p id="copyright">Copyright &copy;2015 Discovery Communications. All Rights Reserved. <a href="#">Privacy Policy</a>  |  <a href="#">Terms of Use</a>  |  <a href="#">Legal Disclaimers</a></p>
     <div class="container-fluid full-height gradient" id="slide-1-container">
       <div id="footer-left"></div>
@@ -244,6 +250,22 @@
             });
           }
         }, 5000);
+
+        $(".sidebar-dots").on('click','a',function(e){
+          e.preventDefault();
+          $('html, body').animate({scrollTop: $($(this).data('target')).offset().top}, 500);
+        });
+        $(window).scroll(function(){
+          var scrollPosition = $(window).scrollTop()+$(window).height()/3;
+          $(".sidebar-dots a").each(function(){
+            var target = $($(this).data('target'));
+            if (scrollPosition > target.offset().top && scrollPosition < target.offset().top + target.height()) {
+              $(this).find('i').removeClass('fa-circle-o').addClass('fa-circle');
+            } else {
+              $(this).find('i').removeClass('fa-circle').addClass('fa-circle-o');
+            }
+          });
+        });
 
         !function(a,b,c,d,e,f,g,h,i,j,k){h=a[d]=a[d]||{},h.ui=h.ui||[],i=a[e]=a[e]||{},i[f]||(j=b.getElementsByTagName(c)[0],k=b.createElement(c),k.src="//platform.massrelevance.com/js/massrel.js",j.parentNode.insertBefore(k,j),i[f]=function(){h.ui.push([].slice.call(arguments))}),i[f]("load",{el:b.getElementById(g)})}(window,document,"script","massrel","spredfast","exp","mr-space_vel-drivesmart-social");
       });
