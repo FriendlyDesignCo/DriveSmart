@@ -37,20 +37,20 @@ footer {
   bottom: 0;
   padding-left: 15px;
   background: #fff;
-  border-bottom: 16px solid #898989;
-  height: 101px;
+  border-bottom: 22px solid #898989;
+  height: 107px;
   width: 100%;
   z-index: 30; }
   footer #copyright {
     position: absolute;
-    bottom: -16px;
+    bottom: -19px;
     z-index: 90;
     padding-top: 15px;
     width: 100%;
     margin-bottom: 0;
     opacity: 0.75;
     padding-left: 15px;
-    font-size: 12px; }
+    font-size: 11px; }
     footer #copyright a {
       color: #fff; }
   footer #footer-left {
