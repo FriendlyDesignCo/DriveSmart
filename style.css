@@ -41,6 +41,20 @@ footer {
   height: 96px;
   width: 100%;
   z-index: 30; }
+  footer #footer-left {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    background: #dbdbdb;
+    height: 100%;
+    z-index: 2; }
+  footer .row {
+    max-width: 1400px;
+    margin: 0 auto;
+    z-index: 3;
+    position: relative;
+    background: #fff;
+    height: 100%; }
   footer .tell-us-why {
     color: #898989;
     font-weight: bold;
