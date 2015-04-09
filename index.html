@@ -128,7 +128,7 @@
     <div class="container-fluid full-height blue-background snap" id="slide-2-container">
       <div class="container full-height" id="slide-2">
         <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
+          <div class="col-lg-8 col-lg-offset-2" data-sr>
             <p class="text-center">
               <img src="images/velocity_logo_small.png" title="Velocity">
             </p>
@@ -145,8 +145,8 @@
     <a name="pledge"></a>
     <div class="container-fluid full-height grey-background snap" id="slide-3-container">
       <div class="container" id="slide-3">
-        <h1 class="text-center">I pledge to Drive Smart</h1>
-        <div class="row breathe-top">
+        <h1 class="text-center" data-sr>I pledge to Drive Smart</h1>
+        <div class="row breathe-top" data-sr>
           <div class="col-md-5 col-md-offset-1 center-line padding-right">
             <p>To <span class="blue">never drive under the influence</span> of drugs or alcohol.</p>
             <p>To <span class="blue">drive free of distractions</span> from phones, passengers, food and more.</p>
@@ -188,9 +188,9 @@
             </form>
           </div>
         </div>
-        <p class="breathe-top text-center pledge-amount">With each pledge, Velocity will donate <sup>$</sup>1 to MADD.*</p>
-        <p class="disclaimer text-center">*Velocity will donate $1 to MADD for each pledge up to $10,000.</p>
-        <p class="text-center breathe-top"><a href="#" id="form-submit"><img src="images/pledge_button.png" title="I want to pledge!"></a></p>
+        <p class="breathe-top text-center pledge-amount" data-sr>With each pledge, Velocity will donate <sup>$</sup>1 to MADD.*</p>
+        <p class="disclaimer text-center" data-sr>*Velocity will donate $1 to MADD for each pledge up to $10,000.</p>
+        <p class="text-center breathe-top" data-sr><a href="#" id="form-submit"><img src="images/pledge_button.png" title="I want to pledge!"></a></p>
       </div>
       <div class="container" id="slide-3-thanks" style="display:none;">
         <div class="row">
@@ -223,7 +223,7 @@
     <a name="social"></a>
     <div class="container-fluid gradient snap" id="slide-4-container">
       <div class="text-center social-header">
-        <div class="header-body">
+        <div class="header-body" data-sr>
           <h1 class="blue">#DriveSmart</h1>
           <h2>Tell us why you drive smart.</h2>
         </div>
@@ -238,7 +238,9 @@
     <script src="stylesheets/jquery.scrollstop.min.js"></script>
     <script src="stylesheets/jquery.easing.min.js"></script>
     <script src="stylesheets/jquery.scrollsnap.min.js"></script>
+    <script src="stylesheets/scrollReveal.min.js"></script>
     <script type="text/javascript">
+      window.sr = new scrollReveal();
       $(function(){
         var updateFullHeightContainers = function(){
           var winHeight = $(window).height();

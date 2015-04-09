@@ -37,8 +37,8 @@ footer {
   bottom: 0;
   padding-left: 15px;
   background: #fff;
-  border-bottom: 11px solid #898989;
-  height: 96px;
+  border-bottom: 16px solid #898989;
+  height: 101px;
   width: 100%;
   z-index: 30; }
   footer #footer-left {
@@ -100,10 +100,12 @@ footer {
 
 #copyright {
   position: fixed;
-  bottom: 100px;
+  bottom: 0;
   z-index: 90;
   padding-top: 15px;
-  padding-left: 50px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0;
   opacity: 0.4;
   font-size: 12px; }
   #copyright a {
