@@ -37,10 +37,36 @@ footer {
   bottom: 0;
   padding-left: 15px;
   background: #fff;
-  border-bottom: 11px solid #898989;
-  height: 96px;
+  border-bottom: 22px solid #898989;
+  height: 107px;
   width: 100%;
   z-index: 30; }
+  footer #copyright {
+    position: absolute;
+    bottom: -19px;
+    z-index: 90;
+    padding-top: 15px;
+    width: 100%;
+    margin-bottom: 0;
+    opacity: 0.75;
+    padding-left: 15px;
+    font-size: 11px; }
+    footer #copyright a {
+      color: #fff; }
+  footer #footer-left {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    background: #dbdbdb;
+    height: 100%;
+    z-index: 2; }
+  footer .row {
+    max-width: 1400px;
+    margin: 0 auto;
+    z-index: 3;
+    position: relative;
+    background: #fff;
+    height: 100%; }
   footer .tell-us-why {
     color: #898989;
     font-weight: bold;
@@ -83,17 +109,6 @@ footer {
       footer .social-buttons .icon i {
         font-size: 16px;
         line-height: 32px; }
-
-#copyright {
-  position: fixed;
-  bottom: 100px;
-  z-index: 90;
-  padding-top: 15px;
-  padding-left: 50px;
-  opacity: 0.4;
-  font-size: 12px; }
-  #copyright a {
-    color: #fff; }
 
 #slide-1-container {
   min-height: 900px;

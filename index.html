@@ -16,7 +16,9 @@
   </head>
   <body>
     <footer class="hidden-sm hidden-xs">
+      <div id="footer-left"></div>
       <div class="row">
+        <p id="copyright" class="hidden-sm hidden-xs">Copyright &copy;2015 Discovery Communications. All Rights Reserved. <a href="#">Privacy Policy</a>  |  <a href="#">Terms of Use</a>  |  <a href="#">Legal Disclaimers</a></p>
         <div class="col-lg-4 tell-us-why">
           <p>Tell us why you drive smart</p>
         </div>
@@ -38,7 +40,6 @@
       <a href="#pledge" data-target="#slide-3-container"><i class="fa fa-circle-o"></i></a>
       <a href="#social" data-target="#slide-4-container"><i class="fa fa-circle-o"></i></a>
     </div>
-    <p id="copyright" class="hidden-sm hidden-xs">Copyright &copy;2015 Discovery Communications. All Rights Reserved. <a href="#">Privacy Policy</a>  |  <a href="#">Terms of Use</a>  |  <a href="#">Legal Disclaimers</a></p>
     <a name="home"></a>
     <div class="container-fluid full-height gradient snap" id="slide-1-container">
       <div id="footer-left"></div>
@@ -111,11 +112,11 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <p class="text-center">
-              <img src="images/velocity_logo_small.png" title="Velocity">
+              <img src="images/velocity_logo_small.png" title="Velocity" data-sr>
             </p>
-            <p class="large">Velocity is committed to <strong>driving smart</strong> and eradicating drunk, drugged and distracted driving.</p>
-            <p class="small hidden-sm hidden-xs">As America's most car, bike and driver-obsessed cable network, Velocity is 100% committed to eradicating the 3D’s from our nation's highways and byways. The only way to drive safely is focused and sober. In a word, smart. If you agree, please pledge to Drive Smart. For your benefit and for the well being of drivers everywhere.</p>
-            <p class="text-center hidden-sm hidden-xs">
+            <p class="large" data-sr>Velocity is committed to <strong>driving smart</strong> and eradicating drunk, drugged and distracted driving.</p>
+            <p class="small hidden-sm hidden-xs" data-sr>As America's most car, bike and driver-obsessed cable network, Velocity is 100% committed to eradicating the 3D’s from our nation's highways and byways. The only way to drive safely is focused and sober. In a word, smart. If you agree, please pledge to Drive Smart. For your benefit and for the well being of drivers everywhere.</p>
+            <p class="text-center hidden-sm hidden-xs" data-sr>
               <a href="#pledge" class="anchor" data-target="#slide-3-container"><img src="images/take_the_pledge_blue.png" title="Take the Pledge"></a>
             </p>
           </div>
@@ -126,8 +127,8 @@
     <a name="pledge"></a>
     <div class="container-fluid full-height grey-background snap" id="slide-3-container">
       <div class="container" id="slide-3">
-        <h1 class="text-center">I pledge to Drive Smart</h1>
-        <div class="row breathe-top">
+        <h1 class="text-center" data-sr>I pledge to Drive Smart</h1>
+        <div class="row breathe-top" data-sr>
           <div class="col-md-5 col-md-offset-1 center-line padding-right">
             <p>To <span class="blue">never drive under the influence</span> of drugs or alcohol.</p>
             <p>To <span class="blue">drive free of distractions</span> from phones, passengers, food and more.</p>
@@ -169,9 +170,9 @@
             </form>
           </div>
         </div>
-        <p class="breathe-top text-center pledge-amount">With each pledge, Velocity will donate <sup>$</sup>1 to MADD.*</p>
-        <p class="disclaimer text-center">*Velocity will donate $1 to MADD for each pledge up to $10,000.</p>
-        <p class="text-center breathe-top"><a href="#" id="form-submit"><img src="images/pledge_button.png" title="I want to pledge!"></a></p>
+        <p class="breathe-top text-center pledge-amount" data-sr>With each pledge, Velocity will donate <sup>$</sup>1 to MADD.*</p>
+        <p class="disclaimer text-center" data-sr>*Velocity will donate $1 to MADD for each pledge up to $10,000.</p>
+        <p class="text-center breathe-top" data-sr><a href="#" id="form-submit"><img src="images/pledge_button.png" title="I want to pledge!"></a></p>
       </div>
       <div class="container" id="slide-3-thanks" style="display:none;">
         <div class="row">
@@ -204,7 +205,7 @@
     <a name="social"></a>
     <div class="container-fluid gradient snap" id="slide-4-container">
       <div class="text-center social-header">
-        <div class="header-body">
+        <div class="header-body" data-sr>
           <h1 class="blue">#DriveSmart</h1>
           <h2>Tell us why you drive smart.</h2>
         </div>
@@ -219,7 +220,9 @@
     <script src="stylesheets/jquery.scrollstop.min.js"></script>
     <script src="stylesheets/jquery.easing.min.js"></script>
     <script src="stylesheets/jquery.scrollsnap.min.js"></script>
+    <script src="stylesheets/scrollReveal.min.js"></script>
     <script type="text/javascript">
+      window.sr = new scrollReveal();
       $(function(){
         var updateFullHeightContainers = function(){
           var winHeight = $(window).height();
