@@ -51,6 +51,21 @@ footer {
   width:100%;
   z-index:30;
 
+  #copyright {
+    position:absolute;
+    bottom:-16px;
+    z-index:90;
+    padding-top:15px;
+    width:100%;
+    margin-bottom:0;
+    opacity:0.75;
+    padding-left:15px;
+    font-size:12px;
+    a {
+      color:#fff;
+    }
+  }
+
   #footer-left {
     position:absolute;
     left:0;
@@ -121,21 +136,6 @@ footer {
         line-height:32px;
       }
     }
-  }
-}
-
-#copyright {
-  position:fixed;
-  bottom:0;
-  z-index:90;
-  padding-top:15px;
-  text-align:center;
-  width:100%;
-  margin-bottom:0;
-  opacity:0.4;
-  font-size:12px;
-  a {
-    color:#fff;
   }
 }
 

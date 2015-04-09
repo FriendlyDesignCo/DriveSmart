@@ -41,6 +41,18 @@ footer {
   height: 101px;
   width: 100%;
   z-index: 30; }
+  footer #copyright {
+    position: absolute;
+    bottom: -16px;
+    z-index: 90;
+    padding-top: 15px;
+    width: 100%;
+    margin-bottom: 0;
+    opacity: 0.75;
+    padding-left: 15px;
+    font-size: 12px; }
+    footer #copyright a {
+      color: #fff; }
   footer #footer-left {
     position: absolute;
     left: 0;
@@ -97,19 +109,6 @@ footer {
       footer .social-buttons .icon i {
         font-size: 16px;
         line-height: 32px; }
-
-#copyright {
-  position: fixed;
-  bottom: 0;
-  z-index: 90;
-  padding-top: 15px;
-  text-align: center;
-  width: 100%;
-  margin-bottom: 0;
-  opacity: 0.4;
-  font-size: 12px; }
-  #copyright a {
-    color: #fff; }
 
 #slide-1-container {
   min-height: 900px;
