@@ -19,13 +19,13 @@
       <div id="footer-left"></div>
       <div class="row">
         <p id="copyright" class="hidden-sm hidden-xs">Copyright &copy;2015 Discovery Communications. All Rights Reserved. <a href="#">Privacy Policy</a>  |  <a href="#">Terms of Use</a>  |  <a href="#">Legal Disclaimers</a></p>
-        <div class="col-lg-4 tell-us-why">
+        <div class="col-md-4 tell-us-why">
           <p>Tell us why you drive smart</p>
         </div>
-        <div class="col-lg-5 twitter-widget">
+        <div class="col-md-5 twitter-widget">
           [Twitter Widget]
         </div>
-        <div class="col-lg-3 social-buttons">
+        <div class="col-md-3 social-buttons">
           <p>Follow DriveSmart
             <a href="#"><span class="icon"><i class="fa fa-facebook"></i></span></a>
             <a href="#"><span class="icon"><i class="fa fa-twitter"></i></span></a>
@@ -46,7 +46,7 @@
       <div id="footer-right"></div>
       <div class="container full-height" id="slide-1">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-xs-6">
             <ul class="logos">
               <li><a href="#"><img src="images/drive_smart_logo.png" title="Drive Smart: Life Depends on it"></a></li>
               <li><a href="#"><img src="images/velocity_logo.png" title="Velocity"></a></li>
@@ -54,7 +54,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-5 donation-promise hidden-sm hidden-xs">
+          <div class="col-md-5 donation-promise hidden-sm hidden-xs">
             <p><strong>Velocity will <span class="blue">donate $1 to MADD</span></strong> for every pledge to end drunk, drugged and distracted driving.*</p>
             <div class="pledge">
               <a href="#pledge" class="anchor" data-target="#slide-3-container"><img src="images/take_the_pledge.png" title="Take the Pledge"></a>
@@ -77,8 +77,9 @@
           </div>
           <div id="talent-quote">
             <p>&ldquo;In 2013, there were over 32,000 auto-related deaths in the U.S. alone. That's unacceptable.&rdquo;</p>
-            <cite><strong>Chris Jacobs</strong>, Overhaulin'</cite>
+            <cite><strong>Chris Jacobs,</strong> Overhaulin'</cite>
             <a href="#" class="play-button"><i class="fa fa-play"></i></a>
+            <div class="clearfix"></div>
           </div>
         </div>
         <div id="talent-2" style="display:none;">
@@ -87,8 +88,9 @@
           </div>
           <div id="talent-quote">
             <p>&ldquo;Every 52 minutes, someone dies in an alcohol-related car crash. MADD is committed to end drunk driving.&rdquo;</p>
-            <cite><strong>Christy Lee</strong>, All Girls Garage</cite>
+            <cite><strong>Christy Lee,</strong> All Girls Garage</cite>
             <a href="#" class="play-button"><i class="fa fa-play"></i></a>
+            <div class="clearfix"></div>
           </div>
         </div>
         <div id="talent-3" style="display:none;">
@@ -97,8 +99,9 @@
           </div>
           <div id="talent-quote">
             <p>&ldquo;You are 23 times more likely to have an accident while texting. Toyota Teen Drive 365 is educating the next generation of safe drivers.&rdquo;</p>
-            <cite><strong>Dave Kindig</strong>, Bitchin' Rides</cite>
+            <cite><strong>Dave Kindig,</strong> Bitchin' Rides</cite>
             <a href="#" class="play-button"><i class="fa fa-play"></i></a>
+            <div class="clearfix"></div>
           </div>
         </div>
       </div>
@@ -126,7 +129,7 @@
 
     <a name="pledge"></a>
     <div class="container-fluid full-height grey-background snap" id="slide-3-container">
-      <div class="container" id="slide-3">
+      <div class="container height-forcer" id="slide-3">
         <h1 class="text-center" data-sr>I pledge to Drive Smart</h1>
         <div class="row breathe-top" data-sr>
           <div class="col-md-5 col-md-offset-1 center-line padding-right">
@@ -226,7 +229,17 @@
       $(function(){
         var updateFullHeightContainers = function(){
           var winHeight = $(window).height();
-          $(".full-height").css({'height':winHeight});
+          if ($(window).width() > 800) {
+            $(".full-height").css({'height':winHeight});
+          } else {
+            $(".full-height").css({'height':'auto'});
+            $(".full-height:not(#slide-1):not(#slide-1-container)").css({'height':winHeight});
+          }
+          $(".full-height").each(function(){
+            if ($(this).find('.height-forcer').length > 0) {
+              $(this).css({'height':$(this).find('.height-forcer').first().height()+100});
+            }
+          });
           $("#slide-4-container .social-header").height(winHeight*0.4);
           //$("#social-container").height(winHeight*0.6);
         };
