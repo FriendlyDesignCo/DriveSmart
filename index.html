@@ -230,14 +230,14 @@
           var winHeight = $(window).height();
           if ($(window).width() > 800) {
             $(".full-height").css({'height':winHeight});
-            console.log(winHeight);
           } else {
             $(".full-height").css({'height':'auto'});
             $(".full-height:not(#slide-1):not(#slide-1-container)").css({'height':winHeight});
           }
           $(".full-height").each(function(){
             if ($(this).find('.height-forcer').length > 0) {
-              $(this).css({'height':$(this).find('.height-forcer').first().height()+100});
+              if ($(this).height() < $(this).find('.height-forcer').first().height()+100)
+                $(this).css({'height':$(this).find('.height-forcer').first().height()+100});
             }
           });
           $("#slide-4-container .social-header").height(winHeight*0.4);
