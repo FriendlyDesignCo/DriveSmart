@@ -251,7 +251,7 @@ footer {
   }
   #talent-image {
     position:absolute;
-    bottom:0;
+    bottom:1px;
     z-index:3;
     right:25%;
   }
@@ -381,6 +381,7 @@ footer {
   }
   input[type=checkbox] {
     margin-top:-8px;
+    width:10%;
   }
   .checkbox label {
     opacity:0.4;
@@ -648,7 +649,7 @@ footer {
   }
   #slide-1 #talent-image {
     max-width:50%;
-    bottom:-10px;
+    bottom:1px;
   }
   #slide-1 .sponsor-logos {
     display:none;
@@ -696,7 +697,7 @@ footer {
     margin-top:0;
   }
   #slide-1 #talent-image {
-    bottom:-10px;
+    bottom:1px;
     max-width:65%;
   }
   #slide-1-container .footer {

@@ -67,7 +67,7 @@
                 <p><span class="blue"></span> Smart Drivers</p>
               </div>
             </div>
-            <p class="disclaimer">*Velocity will donate $1 to MADD for each pledge up to $10,000.</p>
+            <p class="disclaimer">*Velocity will donate $1 to MADD for each pledge, up to $10,000.</p>
           </div>
         </div>
 
@@ -93,14 +93,14 @@
           </div>
           <div id="talent-quote">
             <p>&ldquo;Every 52 minutes, someone dies in an alcohol-related car crash. MADD is committed to end drunk driving.&rdquo;</p>
-            <cite><strong>Christy Lee,</strong> All Girls Garage</cite>
+            <cite><strong>Cristy Lee,</strong> All Girls Garage</cite>
             <a href="https://www.youtube.com/watch?v=6jiNS_4CEug" class="play-button" data-toggle="lightbox" data-width="1500"><i class="fa fa-play"></i></a>
             <div class="clearfix"></div>
           </div>
         </div>
         <div id="talent-3" style="display:none;">
           <div id="talent-image">
-            <img src="images/dave_kindig_optimized.png">
+            <img src="images/dave_kindig.png">
           </div>
           <div id="talent-quote">
             <p>&ldquo;You are 23 times more likely to have an accident while texting. Toyota Teen Drive 365 is educating the next generation of safe drivers.&rdquo;</p>
@@ -123,7 +123,7 @@
               <img src="images/velocity_logo_small.png" title="Velocity" data-sr>
             </p>
             <p class="large" data-sr>Velocity is committed to <strong>driving smart</strong> and eradicating drunk, drugged and distracted driving.</p>
-            <p class="small hidden-sm hidden-xs" data-sr>As America's most car, bike and driver-obsessed cable network, Velocity is 100% committed to eradicating the 3D’s from our nation's highways and byways. The only way to drive safely is focused and sober. In a word, smart. If you agree, please pledge to Drive Smart. For your benefit and for the well being of drivers everywhere.</p>
+            <p class="small hidden-sm hidden-xs" data-sr>As America’s most car-, bike-, and driver-obsessed cable network, Velocity is 100% committed to eliminating the 3 Ds from our nation’s highways and byways. The only way to drive safely is focused and sober. In a word, smart. If you agree, please pledge to Drive Smart. For your benefit and for the well-being of drivers everywhere.</p>
             <p class="text-center hidden-sm hidden-xs" data-sr>
               <a href="#pledge" class="anchor" data-target="#slide-3-container"><img src="images/take_the_pledge_blue.png" title="Take the Pledge"></a>
             </p>
@@ -214,7 +214,7 @@
           </div>
         </div>
         <p class="breathe-top text-center pledge-amount">With each pledge, Velocity will donate <sup>$</sup>1 to MADD.*</p>
-        <p class="disclaimer text-center">*Velocity will donate $1 to MADD for each pledge up to $10,000.</p>
+        <p class="disclaimer text-center">*Velocity will donate $1 to MADD for each pledge, up to $10,000.</p>
         <p class="text-center breathe-top"><a href="#" id="form-submit"><img src="images/pledge_button.png" title="I want to pledge!"></a></p>
         <p class="text-center breathe-top"><a href="http://www.madd.org/"><img src="images/madd_thanks_logo.png" title="madd"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.toyota.com/teendrive365/"><img src="images/td365_thanks_logo.png" class="padding-top" title="TeenDrive365"></a></p>
       </div>
@@ -230,13 +230,13 @@
               <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?p[url]=http%3A%2F%2Fwww.velocitydrivesmart.com%2F&amp;p[summary]=I%20took%20the%20pledge%20to%20DRIVE%20SMART!%20Velocity%20is%20committed%20to%20driving%20smart%20and%20eradicating%20drunk%2C%20drugged%20and%20distracted%20driving.%20Please%20take%20the%20pledge%20too.%20%23DriveSmart"><i class="fa fa-facebook"></i></a>
               <a target="_blank" href="mailto:?&subject=I took the pledge to #DRIVESMART!&amp;body=I%20took%20the%20pledge%20to%20DRIVE%20SMART!%20Velocity%20is%20committed%20to%20driving%20smart%20and%20eradicating%20drunk,%20drugged%20and%20distracted%20driving.%20Please%20take%20the%20pledge%20too.%0A%0Ahttp://www.velocitydrivesmart.com/"><i class="fa fa-envelope-o"></i></a>
             </p>
-            <p class="text-center explore-partners breathe-top">Want to go that extra mile? Take a few minutes and explore our partner’s websites. There are many ways to get involved and make a difference.</p>
+            <p class="text-center explore-partners breathe-top">Want to go that extra mile? Take a few minutes and explore our partners' websites. There are many ways to get involved and make a difference.</p>
           </div>
         </div>
         <div class="row sponsors breathe-top">
           <div class="col-md-3 col-md-offset-3 padding-right">
             <p class="text-center"><img src="images/madd_thanks_logo.png" title="madd"></p>
-            <p>Mothers Against Drunk Driving exists to end drunk driving, help fight drugged driving, support the victims of these violent crimes and prevent underage drinking. You can help by volunteering, advocating for change at the state level or taking part in a MADD Walk. With your help, there will be no more victims. <a href="http://www.madd.org/">Visit site &raquo;</a></p>
+            <p>Mothers Against Drunk Driving exists to end drunk driving, help fight drugged driving, support the victims of these violent crimes and prevent underage drinking. You can help by volunteering, advocating for change at the state level or taking part in a MADD walk. With your help, there will be no more victims. <a href="http://www.madd.org/">Visit site &raquo;</a></p>
           </div>
           <div class="col-md-3 padding-left center-line">
             <p class="text-center"><img src="images/td365_thanks_logo.png" class="padding-top" title="TeenDrive365"></p>
@@ -268,6 +268,7 @@
     <script src="stylesheets/ekko-lightbox.min.js"></script>
     <script type="text/javascript">
       window.sr = new scrollReveal();
+      var talentScroller;
       $(function(){
         var updateFullHeightContainers = function(){
           var winHeight = $(window).height();
@@ -309,7 +310,7 @@
           });
         });
 
-        setInterval(function(){
+        talentScroller = setInterval(function(){
           if ($("#talent-1").is(':visible')) {
             $("#talent-1").fadeOut(800, function(){
               $("#talent-2").fadeIn(800);
