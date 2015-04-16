@@ -135,50 +135,87 @@
     <a name="pledge"></a>
     <div class="container-fluid full-height grey-background snap" id="slide-3-container">
       <div class="container height-forcer" id="slide-3">
-        <h1 class="text-center" data-sr>I pledge to Drive Smart</h1>
-        <div class="row breathe-top" data-sr>
-          <div class="col-md-5 col-md-offset-1 center-line padding-right">
+        <h1 class="text-center">I pledge to Drive Smart</h1>
+        <div class="row breathe-top">
+          <div class="col-md-5 col-md-offset-1 padding-right">
             <p>To <span class="blue">never drive under the influence</span> of drugs or alcohol.</p>
             <p>To <span class="blue">drive free of distractions</span> from phones, passengers, food and more.</p>
             <p>To <span class="blue">protect myself and the ones I love.</span> I will drive smart and remind those around me to drive smart too.</p>
           </div>
-          <div class="col-md-5 padding-left">
-            <form>
-              <label>Name</label>
+          <div class="col-md-5 padding-left center-line">
+            <form method="POST" action="http://velocity-drivesmart.herokuapp.com/submit.php">
+              <label>Name <span class="text-danger">*</span></label>
               <div class="row">
-                <div class="col-sm-6">
-                  <input type="text" name="first_name" class="form-control" placeholder="First" required>
+                <div class="col-xs-6">
+                  <input type="text" name="Field2" class="form-control" placeholder="First" required>
                 </div>
-                <div class="col-sm-6">
-                  <input type="text" name="last_naem" class="form-control" placeholder="Last" required>
-                </div>
-              </div>
-
-              <label>Email</label>
-              <div class="row">
-                <div class="col-sm-12">
-                  <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                <div class="col-xs-6">
+                  <input type="text" name="Field3" class="form-control" placeholder="Last" required>
                 </div>
               </div>
 
-              <label>How do you watch Velocity?</label>
+              <label>Email <span class="text-danger">*</span></label>
               <div class="row">
                 <div class="col-sm-12">
-                  <select name="how" class="form-control" placeholder="Choose One" required>
+                  <input type="email" name="Field5" class="form-control" placeholder="Email Address" required>
+                </div>
+              </div>
+
+              <label>ZIP Code</label>
+              <div class="row">
+                <div class="col-sm-6">
+                  <input type="number" name="Field6" class="form-control" maxlength="5" placeholder="ZIP Code">
+                </div>
+              </div>
+
+              <label>Birthday</label>
+              <div class="row">
+                <div class="col-sm-6">
+                  <input type="date" name="Field7" class="form-control">
+                </div>
+              </div>
+
+              <label>Gender</label>
+              <div class="row">
+                <div class="col-sm-12">
+                  <label class="radio-inline"><input type="radio" name="Field214" value="Female" required> Female</label>
+                  <label class="radio-inline"><input type="radio" name="Field214" value="Male" required> Male</label>
+                </div>
+              </div>
+
+              <label>How do you watch Velocity? <span class="text-danger">*</span></label>
+              <div class="row">
+                <div class="col-sm-12">
+                  <select name="Field112" class="form-control" placeholder="Choose One" required>
                     <option disabled selected></option>
-                    <option>TV</option>
+                    <option>AT&amp;T</option>
+                    <option>Brighthouse</option>
+                    <option>CableOne</option>
+                    <option>Cablevision</option>
+                    <option>Charter</option>
+                    <option>Comcast</option>
+                    <option>Cox</option>
+                    <option>DirectTV</option>
+                    <option>Dish Network</option>
+                    <option>Insight</option>
+                    <option>Mediacom</option>
+                    <option>RCN</option>
+                    <option>Time Warner</option>
+                    <option>Verizon</option>
+                    <option>Other</option>
                   </select>
                 </div>
               </div>
 
               <div class="checkbox"><label><input type="checkbox" class="form-control" value="yes" name="contact" checked> Would you like to be contacted by Velocity and/or Drive Smart?</label></div>
               <p class="grey"><a href="#">Privacy Policy</a> <a href="#">Terms of Use</a></p>
+              <input type="submit" id="form-submit-button" style="display:none;">
             </form>
           </div>
         </div>
-        <p class="breathe-top text-center pledge-amount" data-sr>With each pledge, Velocity will donate <sup>$</sup>1 to MADD.*</p>
-        <p class="disclaimer text-center" data-sr>*Velocity will donate $1 to MADD for each pledge up to $10,000.</p>
-        <p class="text-center breathe-top" data-sr><a href="#" id="form-submit"><img src="images/pledge_button.png" title="I want to pledge!"></a></p>
+        <p class="breathe-top text-center pledge-amount">With each pledge, Velocity will donate <sup>$</sup>1 to MADD.*</p>
+        <p class="disclaimer text-center">*Velocity will donate $1 to MADD for each pledge up to $10,000.</p>
+        <p class="text-center breathe-top"><a href="#" id="form-submit"><img src="images/pledge_button.png" title="I want to pledge!"></a></p>
         <p class="text-center breathe-top"><a href="http://www.madd.org/"><img src="images/madd_thanks_logo.png" title="madd"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.toyota.com/teendrive365/"><img src="images/td365_thanks_logo.png" class="padding-top" title="TeenDrive365"></a></p>
       </div>
       <div class="container" id="slide-3-thanks" style="display:none;">
@@ -197,11 +234,11 @@
           </div>
         </div>
         <div class="row sponsors breathe-top">
-          <div class="col-md-3 col-md-offset-3 center-line padding-right">
+          <div class="col-md-3 col-md-offset-3 padding-right">
             <p class="text-center"><img src="images/madd_thanks_logo.png" title="madd"></p>
             <p>Mothers Against Drunk Driving exists to end drunk driving, help fight drugged driving, support the victims of these violent crimes and prevent underage drinking. You can help by volunteering, advocating for change at the state level or taking part in a MADD Walk. With your help, there will be no more victims. <a href="http://www.madd.org/">Visit site &raquo;</a></p>
           </div>
-          <div class="col-md-3 padding-left">
+          <div class="col-md-3 padding-left center-line">
             <p class="text-center"><img src="images/td365_thanks_logo.png" class="padding-top" title="TeenDrive365"></p>
             <p>Toyota TeenDrive365 is committed to creating the next generation of safe drivers by educating teens and parents about ways to remain safe behind the wheel. The initiative includes online tools, expert advice, local events and social media elements for teens, parents and educators. To learn more about the resources offered through Toyota TeenDrive365, go to <a href="http://www.toyota.com/teendrive365/">www.TeenDrive365.com</a>.<p>
           </div>
@@ -258,8 +295,17 @@
         /* Form */
         $("#form-submit").click(function(e){
           e.preventDefault();
-          $("#slide-3").fadeOut(400, function(){
-            $("#slide-3-thanks").fadeIn();
+          $("#form-submit-button").click();
+        });
+        $("form").submit(function(e){
+          e.preventDefault();
+          $("#form-submit").fadeOut();
+          $.post($(this).attr('action'), $(this).serialize(), function(data){
+            $("#slide-3").fadeOut(400, function(){
+              $("#slide-3-thanks").fadeIn();
+            });
+          }).done(function(){
+            $("#form-submit").fadeIn();
           });
         });
 
