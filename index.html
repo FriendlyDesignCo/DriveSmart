@@ -226,8 +226,8 @@
             </p>
             <h1 class="breathe-top text-center">Success! Thanks for pledging.</h1>
             <p class="social text-center">
-              <a target="_blank" href="https://www.twitter.com/share?text=I%20pledged%20to%20%23DRIVESMART!%20Help%20Velocity%20eradicate%20drunk%2C%20drugged%20and%20distracted%20driving.%20Please%20take%20the%20pledge.&amp;url=http%3A%2F%2Fbit.ly%2Fdrive-smart"><i class="fa fa-twitter"></i></a>
-              <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?p[url]=http%3A%2F%2Fwww.velocitydrivesmart.com%2F&amp;p[summary]=I%20pledged%20to%20%23DRIVESMART!%20Help%20Velocity%20eradicate%20drunk%2C%20drugged%20and%20distracted%20driving.%20Please%20take%20the%20pledge."><i class="fa fa-facebook"></i></a>
+              <a target="_blank" class="external" href="https://www.twitter.com/share?text=I%20pledged%20to%20%23DRIVESMART!%20Help%20Velocity%20eradicate%20drunk%2C%20drugged%20and%20distracted%20driving.%20Please%20take%20the%20pledge.&amp;url=http%3A%2F%2Fbit.ly%2Fdrive-smart"><i class="fa fa-twitter"></i></a>
+              <a target="_blank" class="external" href="https://www.facebook.com/sharer/sharer.php?p[url]=http%3A%2F%2Fwww.velocitydrivesmart.com%2F&amp;p[summary]=I%20pledged%20to%20%23DRIVESMART!%20Help%20Velocity%20eradicate%20drunk%2C%20drugged%20and%20distracted%20driving.%20Please%20take%20the%20pledge."><i class="fa fa-facebook"></i></a>
               <a target="_blank" href="mailto:?&subject=I took the pledge to #DRIVESMART!&amp;body=I%20pledged%20to%20%23DRIVESMART!%20Help%20Velocity%20eradicate%20drunk%2C%20drugged%20and%20distracted%20driving.%20Please%20take%20the%20pledge.%0A%0Ahttp://www.velocitydrivesmart.com/"><i class="fa fa-envelope-o"></i></a>
             </p>
             <p class="text-center explore-partners breathe-top">Want to go that extra mile? Take a few minutes and explore our partners' websites. There are many ways to get involved and make a difference.</p>
@@ -270,6 +270,11 @@
       window.sr = new scrollReveal();
       var talentScroller;
       $(function(){
+        $("a.external").click(function(e){
+          newwindow=window.open($(this).attr('href'), 'externalname', 'height=400,width=600,location=0');
+          if (window.focus()) newwindow.focus();
+          return focus;
+        });
         var updateFullHeightContainers = function(){
           var winHeight = $(window).height();
           if ($(window).width() > 800) {
