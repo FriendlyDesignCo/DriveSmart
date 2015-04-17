@@ -641,4 +641,10 @@ footer {
 .modal-header {
   border-bottom: none; }
 
+span.text-error {
+  color: #a94442;
+  font-size: 16px;
+  line-height: 1;
+  margin-top: 0; }
+
 /*# sourceMappingURL=style.css.map */
