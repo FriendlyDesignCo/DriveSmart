@@ -661,5 +661,10 @@ span.text-error {
     text-align: center; }
     .pledge .center-line {
       text-align: left; } }
+#copyright-mobile {
+  background: #2d2d2d;
+  color: #5d5c5c;
+  text-align: center;
+  padding: 5px; }
 
 /*# sourceMappingURL=style.css.map */
