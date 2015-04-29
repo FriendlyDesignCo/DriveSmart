@@ -127,6 +127,8 @@
             </p>
             <p class="large" data-sr>Velocity is committed to <strong>driving smart</strong> and eradicating drunk, drugged and distracted driving.</p>
             <p class="small hidden-sm hidden-xs" data-sr>As America’s most car-, bike-, and driver-obsessed cable network, Velocity is 100% committed to eliminating the 3 Ds from our nation’s highways and byways. The only way to drive safely is focused and sober. In a word, smart. If you agree, please pledge to Drive Smart. For your benefit and for the well-being of drivers everywhere.</p>
+            <p class="small hidden-md hidden-lg" id="learn-more">Learn More &raquo;</p>
+            <p class="small" style="display:none;" id="learn-more-text">As America’s most car-, bike-, and driver-obsessed cable network, Velocity is 100% committed to eliminating the 3 Ds from our nation’s highways and byways. The only way to drive safely is focused and sober. In a word, smart. If you agree, please pledge to Drive Smart. For your benefit and for the well-being of drivers everywhere.</p>
             <p class="text-center hidden-sm hidden-xs" data-sr>
               <a href="#pledge" class="anchor" data-target="#slide-3-container"><img src="images/take_the_pledge_blue.png" title="Take the Pledge"></a>
             </p>
@@ -401,6 +403,12 @@
           $(this).ekkoLightbox();
         });
 
+        $("#learn-more").click(function(event){
+          event.preventDefault();
+          $(this).hide();
+          $("#learn-more-text").slideDown();
+          $(this).parents('.full-height').css({'height':'auto'});
+        });
         $.get('http://velocity-drivesmart.herokuapp.com/entry-count.php', function(data){
           $(".driver-count span").html(data.EntryCount);
           $(".driver-count").css({opacity:1});

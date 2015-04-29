@@ -648,4 +648,8 @@ span.text-error {
   line-height: 1;
   margin-top: 0; }
 
+@media screen and (min-width: 800px) {
+  .mobile-only {
+    display: none; } }
+
 /*# sourceMappingURL=style.css.map */
