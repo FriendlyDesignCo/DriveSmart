@@ -651,5 +651,8 @@ span.text-error {
 @media screen and (min-width: 800px) {
   .mobile-only {
     display: none; } }
+@media screen and (max-width: 800px) {
+  #slide-2 p {
+    text-align: center; } }
 
 /*# sourceMappingURL=style.css.map */
