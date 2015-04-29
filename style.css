@@ -658,6 +658,8 @@ span.text-error {
 
   .pledge {
     font-size: 20px !important;
-    text-align: center; } }
+    text-align: center; }
+    .pledge .center-line {
+      text-align: left; } }
 
 /*# sourceMappingURL=style.css.map */
