@@ -120,7 +120,7 @@
     <a name="velocity"></a>
     <div class="container-fluid full-height blue-background snap" id="slide-2-container">
       <div class="container full-height" id="slide-2">
-        <div class="row">
+        <div class="row height-forcer">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <p class="text-center">
               <img src="images/velocity_logo_small.png" title="Velocity" data-sr>
@@ -298,7 +298,7 @@
             $(".full-height").css({'height':winHeight});
           } else {
             $(".full-height").css({'height':'auto'});
-            $(".full-height:not(#slide-1):not(#slide-1-container)").css({'height':winHeight});
+            $(".full-height:not(#slide-1,#slide-2):not(#slide-1-container,#slide-2-container)").css({'height':winHeight});
           }
           $(".full-height").each(function(){
             if ($(this).find('.height-forcer').length > 0) {

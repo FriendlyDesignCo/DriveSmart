@@ -308,8 +308,10 @@ footer {
 #slide-2 {
   position:relative;
   min-height:480px;
-  .row {
-    @include vertical-align;
+  @media screen and (min-width:800px) {
+    .row {
+      @include vertical-align;
+    }
   }
   p.large {
     font-size:44px;
