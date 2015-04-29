@@ -651,6 +651,13 @@ span.text-error {
     display: none; } }
 @media screen and (max-width: 800px) {
   #slide-2 p {
+    text-align: center; }
+
+  .pledge-header {
+    font-size: 20px !important; }
+
+  .pledge {
+    font-size: 20px !important;
     text-align: center; } }
 
 /*# sourceMappingURL=style.css.map */
