@@ -665,6 +665,7 @@ span.text-error {
   background: #2d2d2d;
   color: #5d5c5c;
   text-align: center;
-  padding: 5px; }
+  padding: 5px;
+  margin-bottom: 0; }
 
 /*# sourceMappingURL=style.css.map */
