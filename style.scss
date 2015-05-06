@@ -705,6 +705,13 @@ footer {
     padding-left:40px;
   }
 }
+@media screen and (max-width:550px) {
+  #slide-1 #talent-image {
+    bottom:1px;
+    max-width:70%;
+    right:-30px;
+  }
+}
 @media screen and (max-width:400px) {
   #slide-1, #slide-1-container {
     min-height:400px;
@@ -715,13 +722,20 @@ footer {
   #slide-1 #talent-quote {
     margin-top:0;
   }
+  #slide-1-container .footer {
+    height:20px
+  }
+  #slide-1 #talent-image {
+    bottom:1px;
+    max-width:90%;
+    right:-50px;
+  }
+}
+@media screen and (max-width:350px) {
   #slide-1 #talent-image {
     bottom:1px;
     max-width:110%;
     right:-50px;
-  }
-  #slide-1-container .footer {
-    height:20px
   }
 }
 @media screen and (min-width:768px) {
