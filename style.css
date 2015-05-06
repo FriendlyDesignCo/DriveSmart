@@ -551,7 +551,14 @@ footer {
       margin-bottom: 30px; }
 
   #slide-4-container .social-header .header-body h1 {
-    font-size: 40px; } }
+    font-size: 40px; }
+
+  #slide-3 input[type=checkbox] {
+    margin-top: 0;
+    margin-left: -40px; }
+
+  #slide-3 .checkbox label {
+    padding-left: 40px; } }
 @media screen and (max-width: 400px) {
   #slide-1, #slide-1-container {
     min-height: 400px; }
@@ -564,7 +571,8 @@ footer {
 
   #slide-1 #talent-image {
     bottom: 1px;
-    max-width: 85%; }
+    max-width: 110%;
+    right: -50px; }
 
   #slide-1-container .footer {
     height: 20px; } }
