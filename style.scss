@@ -165,7 +165,9 @@ footer {
   position:relative;
   min-height:900px;
   overflow-x:hidden;
-  margin-right:-15px;
+  @media screen and (max-width:640px) {
+    margin-right:-15px;
+  }
   .logos {
     margin-top:60px;
     position:relative;

@@ -125,8 +125,10 @@ footer {
 #slide-1 {
   position: relative;
   min-height: 900px;
-  overflow-x: hidden;
-  margin-right: -15px; }
+  overflow-x: hidden; }
+  @media screen and (max-width: 640px) {
+    #slide-1 {
+      margin-right: -15px; } }
   #slide-1 .logos {
     margin-top: 60px;
     position: relative;
