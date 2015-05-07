@@ -125,7 +125,8 @@ footer {
 #slide-1 {
   position: relative;
   min-height: 900px;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  margin-right: -15px; }
   #slide-1 .logos {
     margin-top: 60px;
     position: relative;
@@ -578,7 +579,10 @@ footer {
     margin-top: 30px; }
 
   #slide-1 #talent-quote {
-    margin-top: 50px; }
+    top: initial;
+    position: absolute;
+    bottom: 30px;
+    left: 10px; }
 
   #slide-1-container .footer {
     height: 20px; }
