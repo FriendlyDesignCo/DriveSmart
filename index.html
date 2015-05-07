@@ -249,9 +249,9 @@
       </div>
       <div class="container" id="slide-3-thanks" style="display:none;">
         <div class="row">
-          <div class="col-md-6 col-md-offset-3">
+          <div class="col-md-6 col-md-offset-3 col-xs-12">
             <p class="text-center">
-              <img src="images/velocity_logo_negative.png" title="Velocity">
+              <img src="images/velocity_logo_negative.png" title="Velocity" style="max-width:100%;">
             </p>
             <h1 class="breathe-top text-center">Success! Thanks for pledging.</h1>
             <p class="social text-center">
@@ -262,12 +262,12 @@
             <p class="text-center explore-partners breathe-top">Want to go that extra mile? Take a few minutes and explore our partners' websites. There are many ways to get involved and make a difference.</p>
           </div>
         </div>
-        <div class="row sponsors breathe-top">
-          <div class="col-md-3 col-md-offset-3 padding-right">
+        <div class="row sponsors">
+          <div class="col-md-3 col-md-offset-3 center-line  padding-right breathe-top">
             <p class="text-center"><img src="images/madd_thanks_logo.png" title="madd"></p>
             <p>Mothers Against Drunk Driving exists to end drunk driving, help fight drugged driving, support the victims of these violent crimes and prevent underage drinking. You can help by volunteering, advocating for change at the state level or taking part in a MADD walk. With your help, there will be no more victims. <a href="http://www.madd.org/" target="_blank">Visit site &raquo;</a></p>
           </div>
-          <div class="col-md-3 padding-left center-line">
+          <div class="col-md-3 padding-left breathe-top">
             <p class="text-center"><img src="images/td365_thanks_logo.png" class="padding-top" title="TeenDrive365"></p>
             <p>Toyota TeenDrive365 is committed to creating the next generation of safe drivers by educating teens and parents about ways to remain safe behind the wheel. The initiative includes online tools, expert advice, local events and social media elements for teens, parents and educators. To learn more about the resources offered through Toyota TeenDrive365, go to <a href="http://www.toyota.com/teendrive365/" target="_blank">www.TeenDrive365.com</a>.<p>
           </div>
@@ -373,8 +373,11 @@
             return false;
           $("#form-submit").fadeOut();
           $.post($(this).attr('action'), $(this).serialize(), function(data){
+            $("html, body").animate({ scrollTop: $('#slide-3-container').offset().top }, 1000);
             $("#slide-3").fadeOut(400, function(){
-              $("#slide-3-thanks").fadeIn();
+              $("#slide-3-thanks").fadeIn(400,function(){
+                $("#slide-3-container").css({'height':$("#slide-3-thanks").height()+50});
+              });
             });
           }).done(function(){
             $("#form-submit").fadeIn();

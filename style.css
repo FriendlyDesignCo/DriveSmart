@@ -353,9 +353,11 @@ footer {
     #slide-3-thanks .social a + a {
       margin-left: 15px; }
   #slide-3-thanks .explore-partners {
-    font-size: 18px;
-    padding-left: 50px;
-    padding-right: 50px; }
+    font-size: 18px; }
+    @media screen and (min-width: 600px) {
+      #slide-3-thanks .explore-partners {
+        padding-left: 50px;
+        padding-right: 50px; } }
   #slide-3-thanks .sponsors {
     color: #ebebeb;
     font-size: 14px; }
@@ -378,6 +380,9 @@ footer {
   #slide-4-container .social-header {
     position: relative;
     min-height: 250px; }
+    @media screen and (max-width: 640px) {
+      #slide-4-container .social-header {
+        padding-top: 20px; } }
     #slide-4-container .social-header .header-body {
       position: relative;
       top: 50%;

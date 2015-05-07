@@ -449,8 +449,10 @@ footer {
   }
   .explore-partners {
     font-size:18px;
-    padding-left:50px;
-    padding-right:50px;
+    @media screen and (min-width:600px) {
+      padding-left:50px;
+      padding-right:50px;
+    }
   }
   .sponsors {
     color:#ebebeb;
@@ -484,6 +486,9 @@ footer {
   .social-header {
     position:relative;
     min-height:250px;
+    @media screen and (max-width:640px) {
+      padding-top:20px;
+    }
     .header-body {
       @include vertical-align;
       font-size:24px;
