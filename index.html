@@ -146,6 +146,19 @@
     <a name="pledge"></a>
     <div class="container-fluid full-height grey-background snap" id="slide-3-container">
       <div class="container height-forcer" id="slide-3">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <h1>Take Action</h1>
+          <a class="action-button" id="take-the-pledge" href="#">Take the <strong>Velocity Pledge</strong> to Drive Smart</a>
+          <p>Drugs, alcohol, phones—none of it will keep you from vowing to drive safe and save lives</p>
+          <a class="action-button" href="#">Make a donation to <strong>MADD</strong></a>
+          <p>Mothers Against Drunk Driving does it all to protect families from drunk driving and underage drinking—serving a victim or survivor every eight minutes at no charge.</p>
+          <a class="action-button" href="#">Participate in a local <strong>Walk Like MADD</strong> event</a>
+          <p>Join as a walker or start a team to drive fundraising that will help end drunk driving.</p>
+          <a class="action-button" href="#">Volunteer your time to <strong>MADD</strong></a>
+          <p>There is no MADD without volunteers and there is no better way to save lives and prevent injuries than by matching your expertise to the many opportunities at MADD.</p>
+        </div>
+      </div>
+      <div class="container" id="slide-3-pledge" style="display:none;">
         <form method="POST" action="http://velocity-drivesmart.herokuapp.com/submit.php">
           <div class="hidden-md hidden-lg text-center">
             <h1 style="color:#129ad3;text-transform:uppercase;font-weight:800;font-family: 'Roboto Slab', serif;font-size:32px;">Take the Pledge</h1>
@@ -376,7 +389,7 @@
           $("#form-submit").fadeOut();
           $.post($(this).attr('action'), $(this).serialize(), function(data){
             $("html, body").animate({ scrollTop: $('#slide-3-container').offset().top }, 1000);
-            $("#slide-3").fadeOut(400, function(){
+            $("#slide-3-pledge").fadeOut(400, function(){
               $("#slide-3-thanks").fadeIn(400,function(){
                 $("#slide-3-container").css({'height':$("#slide-3-thanks").height()+50});
               });
@@ -439,6 +452,16 @@
         $.get('http://velocity-drivesmart.herokuapp.com/entry-count.php', function(data){
           $(".driver-count span").html(data.EntryCount);
           $(".driver-count").css({opacity:1});
+        });
+
+        $("#take-the-pledge").click(function(e){
+          e.preventDefault();
+          $("#slide-3").fadeOut(400, function(){
+            if ($("#slide-3-container").height() < $("#slide-3-pledge").height()) {
+              $("#slide-3-container").animate({'height': $("#slide-3-pledge").height()+100}, 400);
+            }
+            $("#slide-3-pledge").fadeIn();
+          });
         });
       });
     </script>

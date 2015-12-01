@@ -263,6 +263,57 @@ footer {
   background: #2e2e2e; }
 
 #slide-3 {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+  #slide-3 h1 {
+    font-size: 48.792px;
+    font-family: 'montserratlight', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1em;
+    padding-bottom: 30px; }
+  #slide-3 .action-button {
+    padding: 14px 50px;
+    display: block;
+    border: 3px solid #636363;
+    border-right: none;
+    color: #ebebeb;
+    font-size: 28px;
+    font-family: 'montserratlight', sans-serif;
+    position: relative;
+    text-align: center;
+    -moz-transition: 0.25s all;
+    -o-transition: 0.25s all;
+    -webkit-transition: 0.25s all;
+    transition: 0.25s all; }
+    #slide-3 .action-button strong {
+      color: #219bd1;
+      font-family: 'Montserrat', sans-serif; }
+    #slide-3 .action-button:after {
+      content: ' ';
+      width: 91px;
+      height: 73px;
+      position: absolute;
+      top: -3px;
+      right: -13px;
+      background: url("images/action_arrow.png") no-repeat center right; }
+    #slide-3 .action-button:hover {
+      opacity: 0.8;
+      text-decoration: none; }
+  #slide-3 p {
+    color: #7e7c7c;
+    font-family: 'montserratlight', sans-serif;
+    font-size: 16px;
+    max-width: 800px;
+    margin-top: 8px; }
+  #slide-3 p + .action-button {
+    margin-top: 30px; }
+
+#slide-3-pledge {
   min-height: 680px;
   position: relative;
   top: 50%;
@@ -271,56 +322,56 @@ footer {
   transform: translateY(-50%);
   font-family: 'montserratlight', sans-serif;
   font-size: 28px; }
-  #slide-3 .breathe-top {
+  #slide-3-pledge .breathe-top {
     margin-top: 40px; }
-  #slide-3 p + p {
+  #slide-3-pledge p + p {
     margin-top: 30px; }
-  #slide-3 h1 {
+  #slide-3-pledge h1 {
     font-size: 56px;
     margin-top: 0; }
-  #slide-3 .blue {
+  #slide-3-pledge .blue {
     color: #219bd1;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold; }
   @media screen and (min-width: 991px) {
-    #slide-3 .center-line {
+    #slide-3-pledge .center-line {
       border-left: 1px solid #fff; }
-    #slide-3 .padding-right {
+    #slide-3-pledge .padding-right {
       padding-right: 60px; }
-    #slide-3 .padding-left {
+    #slide-3-pledge .padding-left {
       padding-left: 60px; } }
-  #slide-3 #form-submit img {
+  #slide-3-pledge #form-submit img {
     max-width: 100%; }
-  #slide-3 label {
+  #slide-3-pledge label {
     font-family: 'montserratlight', sans-serif;
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 100; }
-  #slide-3 small {
+  #slide-3-pledge small {
     font-size: 14px;
     text-transform: uppercase;
     color: #959595;
     display: block; }
-  #slide-3 input[type=checkbox] {
+  #slide-3-pledge input[type=checkbox] {
     margin-top: -8px;
     width: 10%; }
-  #slide-3 .checkbox label {
+  #slide-3-pledge .checkbox label {
     opacity: 0.4;
     font-size: 12px;
     text-transform: none; }
-  #slide-3 form .row {
+  #slide-3-pledge form .row {
     margin-bottom: 10px; }
-  #slide-3 .grey {
+  #slide-3-pledge .grey {
     line-height: 12px;
     margin-top: -10px; }
-  #slide-3 .grey a {
+  #slide-3-pledge .grey a {
     font-size: 12px;
     color: #fefcfc;
     opacity: 0.4;
     text-decoration: underline; }
-  #slide-3 .pledge-amount {
+  #slide-3-pledge .pledge-amount {
     font-size: 26px; }
-  #slide-3 .disclaimer {
+  #slide-3-pledge .disclaimer {
     opacity: 0.4;
     font-size: 12px; }
 
@@ -503,11 +554,11 @@ footer {
   #talent-quote {
     margin-top: 30px; } }
 @media screen and (max-width: 990px) {
-  #slide-3 {
+  #slide-3-pledge {
     font-size: 26px; }
-    #slide-3 h1 {
+    #slide-3-pledge h1 {
       font-size: 26px; }
-    #slide-3 .breathe-top {
+    #slide-3-pledge .breathe-top {
       margin-top: 15px; } }
 @media screen and (max-width: 900px) {
   #slide-1 #talent-image {
@@ -562,11 +613,11 @@ footer {
   #slide-4-container .social-header .header-body h1 {
     font-size: 40px; }
 
-  #slide-3 input[type=checkbox] {
+  #slide-3-pledge input[type=checkbox] {
     margin-top: 0;
     margin-left: -40px; }
 
-  #slide-3 .checkbox label {
+  #slide-3-pledge .checkbox label {
     padding-left: 40px; } }
 @media screen and (max-width: 550px) {
   #slide-1 #talent-image {
@@ -697,5 +748,18 @@ span.text-error {
   text-align: center;
   padding: 5px;
   margin-bottom: 0; }
+
+@media screen and (max-width: 880px) {
+  #slide-3 .action-button {
+    font-size: 20px;
+    line-height: 39px; } }
+@media screen and (max-width: 730px) {
+  #slide-3 .action-button {
+    font-size: 16px;
+    height: 73px;
+    line-height: 20px;
+    text-align: left;
+    padding-right: 80px;
+    padding-left: 10px; } }
 
 /*# sourceMappingURL=style.css.map */
