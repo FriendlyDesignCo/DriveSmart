@@ -260,7 +260,18 @@ footer {
     margin-top: 30px; }
 
 #slide-3-container {
+  position: relative;
   background: #2e2e2e; }
+
+#close-pledge {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px 15px;
+  font-size: 21px;
+  border-radius: 50%;
+  color: #666; }
 
 #slide-3 {
   position: relative;
@@ -314,6 +325,8 @@ footer {
     margin-top: 30px; }
 
 #slide-3-pledge {
+  padding-top: 20px;
+  padding-bottom: 20px;
   min-height: 680px;
   position: relative;
   top: 50%;

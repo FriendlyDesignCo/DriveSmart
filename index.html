@@ -145,16 +145,17 @@
 
     <a name="pledge"></a>
     <div class="container-fluid full-height grey-background snap" id="slide-3-container">
+      <a href="#" id="close-pledge" style="display:none;"><i class="fa fa-times"></i></a>
       <div class="container height-forcer" id="slide-3">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           <h1>Take Action</h1>
           <a class="action-button" id="take-the-pledge" href="#">Take the <strong>Velocity Pledge</strong> to Drive Smart</a>
           <p>Drugs, alcohol, phones—none of it will keep you from vowing to drive safe and save lives</p>
-          <a class="action-button" href="http://www.madd.org/donate">Make a donation to <strong>MADD</strong></a>
+          <a class="action-button" href="http://www.madd.org/donate" target="_blank">Make a donation to <strong>MADD</strong></a>
           <p>Mothers Against Drunk Driving does it all to protect families from drunk driving and underage drinking—serving a victim or survivor every eight minutes at no charge.</p>
-          <a class="action-button" href="http://www.walklikemadd.org/">Participate in a local <strong>Walk Like MADD</strong> event</a>
+          <a class="action-button" href="http://www.walklikemadd.org/" target="_blank">Participate in a local <strong>Walk Like MADD</strong> event</a>
           <p>Join as a walker or start a team to drive fundraising that will help end drunk driving.</p>
-          <a class="action-button" href="http://www.madd.org/volunteer">Volunteer your time to <strong>MADD</strong></a>
+          <a class="action-button" href="http://www.madd.org/volunteer" target="_blank">Volunteer your time to <strong>MADD</strong></a>
           <p>There is no MADD without volunteers and there is no better way to save lives and prevent injuries than by matching your expertise to the many opportunities at MADD.</p>
         </div>
       </div>
@@ -259,7 +260,7 @@
           <p class="breathe-top text-center pledge-amount">With each pledge, Velocity will donate <sup>$</sup>1 to MADD.*</p>
           <p class="disclaimer text-center">*Up to $10,000.</p>
           <p class="text-center breathe-top"><input class="hidden-xs hidden-sm" type="image" src="images/pledge_button.png"><input class="hidden-md hidden-lg" type="image" src="images/pledge_button_small.png"></p>
-          <p class="text-center breathe-top"><a href="http://www.madd.org/" target="_blank"><img src="images/madd_thanks_logo.png" title="madd"></a><br class="hidden-md hidden-lg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br class="hidden-md hidden-lg"><a href="http://www.toyota.com/teendrive365/" target="_blank"><img src="images/td365_thanks_logo.png" class="padding-top" title="TeenDrive365"></a></p>
+          <p class="text-center breathe-top"><a href="http://www.madd.org/" target="_blank"><img src="images/madd_thanks_logo.png" title="madd" width="166" height="56"></a><br class="hidden-md hidden-lg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br class="hidden-md hidden-lg"><a href="http://www.toyota.com/teendrive365/" target="_blank"><img src="images/td365_thanks_logo.png" class="padding-top" title="TeenDrive365" with="230" height="29"></a></p>
         </form>
       </div>
       <div class="container" id="slide-3-thanks" style="display:none;">
@@ -279,11 +280,11 @@
         </div>
         <div class="row sponsors">
           <div class="col-md-3 col-md-offset-3 center-line  padding-right breathe-top">
-            <p class="text-center"><img src="images/madd_thanks_logo.png" title="madd"></p>
+            <p class="text-center"><img src="images/madd_thanks_logo.png" title="madd" width="166" height="56"></p>
             <p>Mothers Against Drunk Driving exists to end drunk driving, help fight drugged driving, support the victims of these violent crimes and prevent underage drinking. You can help by volunteering, advocating for change at the state level or taking part in a MADD walk. With your help, there will be no more victims. <a href="http://www.madd.org/" target="_blank">Visit site &raquo;</a></p>
           </div>
           <div class="col-md-3 padding-left breathe-top">
-            <p class="text-center"><img src="images/td365_thanks_logo.png" class="padding-top" title="TeenDrive365"></p>
+            <p class="text-center"><img src="images/td365_thanks_logo.png" class="padding-top" title="TeenDrive365" with="230" height="29"></p>
             <p>Toyota TeenDrive365 is committed to creating the next generation of safe drivers by educating teens and parents about ways to remain safe behind the wheel. The initiative includes online tools, expert advice, local events and social media elements for teens, parents and educators. To learn more about the resources offered through Toyota TeenDrive365, go to <a href="http://www.toyota.com/teendrive365/" target="_blank">www.TeenDrive365.com</a>.<p>
           </div>
         </div>
@@ -458,10 +459,24 @@
           e.preventDefault();
           $("#slide-3").fadeOut(400, function(){
             if ($("#slide-3-container").height() < $("#slide-3-pledge").height()) {
-              $("#slide-3-container").animate({'height': $("#slide-3-pledge").height()+100}, 400);
+              $("#slide-3-container").css({'height': $("#slide-3-pledge").height()+100});
+              $("#slide-3-pledge, #close-pledge").fadeIn();
+            } else {
+              $("#slide-3-pledge, #close-pledge").fadeIn();
             }
-            $("#slide-3-pledge").fadeIn();
           });
+        });
+
+        $("#close-pledge").click(function(e){
+          e.preventDefault();
+          $("#slide-3-container").animate({'height': $("#slide-3").height()+100}, 400);
+          $("#slide-3-pledge, #close-pledge, #slide-3-thanks").fadeOut(400, function(){
+            $("#slide-3").fadeIn();
+          });
+        });
+
+        $(window).resize(function(){
+          $("#slide-3-container").css({'height': $("#slide-3-container > div:visible").height()+100});
         });
       });
     </script>
