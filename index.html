@@ -149,119 +149,48 @@
       <div class="container height-forcer" id="slide-3">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           <h1>Take Action</h1>
-          <a class="action-button" id="take-the-pledge" href="#">Take the <strong>Velocity Pledge</strong> to Drive Smart</a>
-          <p>Drugs, alcohol, phones—none of it will keep you from vowing to drive safe and save lives</p>
-          <a class="action-button" href="http://www.madd.org/donate" target="_blank">Make a donation to <strong>MADD</strong></a>
-          <p>Mothers Against Drunk Driving does it all to protect families from drunk driving and underage drinking—serving a victim or survivor every eight minutes at no charge.</p>
-          <a class="action-button" href="http://www.walklikemadd.org/" target="_blank">Participate in a local <strong>Walk Like MADD</strong> event</a>
-          <p>Join as a walker or start a team to drive fundraising that will help end drunk driving.</p>
-          <a class="action-button" href="http://www.madd.org/volunteer" target="_blank">Volunteer your time to <strong>MADD</strong></a>
-          <p>There is no MADD without volunteers and there is no better way to save lives and prevent injuries than by matching your expertise to the many opportunities at MADD.</p>
+        </div>
+        <div class="clearfix"></div>
+        <div class="flex-row">
+          <a href="#" class="action-button" id="take-the-pledge">
+            <div>
+              <p class="heading">Take the<br><strong>Velocity Pledge</strong><br>to Drive Smart</p>
+              <p>Drive safely - never distracted or under the influence of drugs and alcohol.</p>
+            </div>
+          </a>
+        </div>
+        <div class="clearfix"></div>
+        <div class="flex-row">
+          <a href="#" class="action-button">
+            <div>
+              <p class="heading">Participate<br>in a local<br><strong>Walk Like MADD</strong> event</p>
+              <p>Help put an end to drunk driving by walking with friends, family and neighbors.</p>
+            </div>
+          </a>
+          <a href="#" class="action-button">
+            <div>
+              <p class="heading">Donate through<br><strong>Global Giving</strong></p>
+              <p>Global Giving lets you connect and donate to MADD and other organizations dedicated to end drunk driving.</p>
+            </div>
+          </a>
+        </div>
+        <div class="flex-row">
+          <a href="#" class="action-button">
+            <div>
+              <p class="heading">Volunteer your<br>time to <strong>MADD</strong></p>
+              <p>Join an army of ordinary citizens who've become extraordinary activists in saving lives and preventing injuries.</p>
+            </div>
+          </a>
+          <a href="#" class="action-button">
+            <div>
+              <p class="heading">Volunteer your<br>time through<br><strong>VolunteerMatch</strong></p>
+              <p>Find a local cause that lights you up.  Get in touch with a nonprofit that needs you.</p>
+            </div>
+          </a>
         </div>
       </div>
       <div class="container" id="slide-3-pledge" style="display:none;">
-        <form method="POST" action="http://velocity-drivesmart.herokuapp.com/submit.php">
-          <div class="hidden-md hidden-lg text-center">
-            <h1 style="color:#129ad3;text-transform:uppercase;font-weight:800;font-family: 'Roboto Slab', serif;font-size:32px;">Take the Pledge</h1>
-            <p>With each pledge, Velocity will donate $1 to MADD.*</p>
-            <hr style="border-top:1px solid #464646;">
-          </div>
-          <h1 class="text-center pledge-header">I pledge to Drive Smart</h1>
-          <div class="row breathe-top pledge">
-            <div class="col-md-5 col-md-offset-1 padding-right">
-              <p>To <span class="blue">never drive under the influence</span> of drugs or alcohol.</p>
-              <p>To <span class="blue">drive free of distractions</span> from phones, passengers, food and more.</p>
-              <p>To <span class="blue">protect myself and the ones I love.</span> I will drive smart and remind those around me to drive smart, too.</p>
-              <hr style="border-top:1px solid #464646;" class="hidden-md hidden-lg">
-            </div>
-            <div class="col-md-5 padding-left center-line">
-
-              <div class="form-group">
-                <label>Name <span class="text-danger">*</span></label>
-                <div class="row">
-                  <div class="col-xs-6">
-                    <input type="text" name="Field2" class="form-control" placeholder="First" required>
-                  </div>
-                  <div class="col-xs-6">
-                    <input type="text" name="Field3" class="form-control" placeholder="Last" required>
-                  </div>
-                </div>
-                <span class="text-error"></span>
-              </div>
-
-              <div class="form-group">
-                <label>Email <span class="text-danger">*</span></label>
-                <div class="row">
-                  <div class="col-sm-12">
-                    <input type="email" name="Field5" class="form-control" placeholder="Email Address" required>
-                  </div>
-                </div>
-                <span class="text-error"></span>
-              </div>
-
-              <label>ZIP Code</label>
-              <div class="row">
-                <div class="col-sm-6">
-                  <input type="number" name="Field6" class="form-control" maxlength="5" placeholder="ZIP Code">
-                </div>
-              </div>
-
-              <label>Birthday</label>
-              <div class="row">
-                <div class="col-sm-6">
-                  <input type="date" name="Field7" class="form-control">
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label>Gender</label>
-                <div class="row">
-                  <div class="col-sm-12">
-                    <label class="radio-inline"><input type="radio" name="Field214" value="Female" required> Female</label>
-                    <label class="radio-inline"><input type="radio" name="Field214" value="Male" required> Male</label>
-                  </div>
-                </div>
-                <span class="text-error"></span>
-              </div>
-
-              <div class="form-group">
-                <label>How do you watch Velocity? <span class="text-danger">*</span></label>
-                <div class="row">
-                  <div class="col-sm-12">
-                    <select name="Field112" class="form-control" placeholder="Choose One" required>
-                      <option disabled selected></option>
-                      <option>AT&amp;T</option>
-                      <option>Brighthouse</option>
-                      <option>CableOne</option>
-                      <option>Cablevision</option>
-                      <option>Charter</option>
-                      <option>Comcast</option>
-                      <option>Cox</option>
-                      <option>DirectTV</option>
-                      <option>Dish Network</option>
-                      <option>Insight</option>
-                      <option>Mediacom</option>
-                      <option>RCN</option>
-                      <option>Time Warner</option>
-                      <option>Verizon</option>
-                      <option>Other</option>
-                    </select>
-                    <span class="text-error">
-                  </div>
-                </div>
-              </div>
-
-              <div class="checkbox"><label><input type="checkbox" class="form-control" value="yes" name="contact" checked> Would you like to be contacted by Velocity and/or Drive Smart?</label></div>
-              <p class="grey"><a href="http://corporate.discovery.com/privacy-policy/" target="_blank">Privacy Policy</a></p>
-              <input type="submit" id="form-submit-button" style="display:none;">
-
-            </div>
-          </div>
-          <p class="breathe-top text-center pledge-amount">With each pledge, Velocity will donate <sup>$</sup>1 to MADD.*</p>
-          <p class="disclaimer text-center">*Up to $10,000.</p>
-          <p class="text-center breathe-top"><input class="hidden-xs hidden-sm" type="image" src="images/pledge_button.png"><input class="hidden-md hidden-lg" type="image" src="images/pledge_button_small.png"></p>
-          <p class="text-center breathe-top"><a href="http://www.madd.org/" target="_blank"><img src="images/madd_thanks_logo.png" title="madd" width="166" height="56"></a><br class="hidden-md hidden-lg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br class="hidden-md hidden-lg"><a href="http://www.toyota.com/teendrive365/" target="_blank"><img src="images/td365_thanks_logo.png" class="padding-top" title="TeenDrive365" with="230" height="29"></a></p>
-        </form>
+        <iframe src="https://display.engagesciences.com/display/page/landing/4d349091-caf5-4d8b-b603-7f7cd5469806/46979/details?stageMode=true"></iframe>
       </div>
       <div class="container" id="slide-3-thanks" style="display:none;">
         <div class="row">
