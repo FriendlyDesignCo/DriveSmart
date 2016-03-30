@@ -62,7 +62,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-5 donation-promise hidden-sm hidden-xs">
+          <div class="col-md-4 donation-promise hidden-sm hidden-xs">
             <p><strong>Velocity will <span class="blue">donate $1 to MADD</span></strong> for every pledge to end drunk, drugged and distracted driving.*</p>
             <div class="pledge">
               <a href="#pledge" class="anchor" data-target="#slide-3-container"><img src="images/take_action.png" title="Take Action"></a>
@@ -379,8 +379,11 @@
           $("#learn-more-text").slideDown();
           $(this).parents('.full-height').css({'height':'auto'});
         });
-        $.get('http://velocity-drivesmart.herokuapp.com/entry-count.php', function(data){
-          $(".driver-count span").html(data.EntryCount);
+        $.get('http://www.velocitydrivesmart.com/count.txt', function(data){
+          var count = data.replace(/./g, function(c, i, a) {
+            return i && c !== "." && ((a.length - i) % 3 === 0) ? ',' + c : c;
+          });
+          $(".driver-count span").html(count);
           $(".driver-count").css({opacity:1});
         });
 
