@@ -298,7 +298,6 @@ footer {
     flex-wrap: wrap; }
   #slide-3 .action-button {
     display: inline-block;
-    width: 100%;
     max-width: 340px;
     margin: 25px 40px;
     border: 2px solid #636363;
@@ -331,7 +330,9 @@ footer {
         margin: 0 auto; }
       #slide-3 .action-button > div p:not(.heading) {
         padding-top: 15px;
-        border-top: 1px solid #3c3c3c; }
+        padding-left: 15px;
+        border-top: 1px solid #3c3c3c;
+        text-align: left; }
       #slide-3 .action-button > div strong {
         color: #219bd1;
         font-family: 'Montserrat', sans-serif; }
