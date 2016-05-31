@@ -34,7 +34,7 @@
           <script>!function(a,b,c,d,e,f,g,h,i,j,k){h=a[d]=a[d]||{},h.ui=h.ui||[],i=a[e]=a[e]||{},i[f]||(j=b.getElementsByTagName(c)[0],k=b.createElement(c),k.src="//platform.massrelevance.com/js/massrel.js",j.parentNode.insertBefore(k,j),i[f]=function(){h.ui.push([].slice.call(arguments))}),i[f]("load",{el:b.getElementById(g)})}(window,document,"script","massrel","spredfast","exp","mr-space_vel-drivesmart-social---spotlight");</script>
         </div>
         <div class="col-md-3 social-buttons">
-          <p>Follow DriveSmart
+          <p>Follow Velocity
             <a href="https://www.facebook.com/VelocityTV" target="_blank"><span class="icon"><i class="fa fa-facebook"></i></span></a>
             <a href="https://twitter.com/velocity" target="_blank"><span class="icon"><i class="fa fa-twitter"></i></span></a>
             <a href="https://instagram.com/velocity/" target="_blank"><span class="icon"><i class="fa fa-instagram"></i></span></a>
@@ -190,7 +190,7 @@
         </div>
       </div>
       <div class="container" id="slide-3-pledge" style="display:none;">
-        <iframe src="https://display.engagesciences.com/display/page/landing/4d349091-caf5-4d8b-b603-7f7cd5469806/46979/details"></iframe>
+        <iframe src="about:blank" id="form-iframe"></iframe>
       </div>
       <div class="container" id="slide-3-thanks" style="display:none;">
         <div class="row">
@@ -226,7 +226,7 @@
         <div class="header-body" data-sr>
           <h1 class="blue">#DriveSmart</h1>
           <h2>Tell us why you drive smart.</h2>
-          <p class="text-center hidden-md hidden-lg"><br>Follow Us<br>
+          <p class="text-center hidden-md hidden-lg"><br>Follow Velocity<br>
             <a href="https://www.facebook.com/VelocityTV" target="_blank"><span class="icon"><i class="fa fa-facebook"></i></span></a>
             <a href="https://twitter.com/velocity" target="_blank"><span class="icon"><i class="fa fa-twitter"></i></span></a>
             <a href="https://instagram.com/velocity/" target="_blank"><span class="icon"><i class="fa fa-instagram"></i></span></a>
@@ -392,9 +392,15 @@
           $("#slide-3").fadeOut(400, function(){
             if ($("#slide-3-container").height() < $("#slide-3-pledge").height()) {
               $("#slide-3-container").css({'height': $("#slide-3-pledge").height()+100});
-              $("#slide-3-pledge, #close-pledge").fadeIn();
+              $("#slide-3-pledge, #close-pledge").fadeIn(400, function(){
+                $("#form-iframe").attr('src', 'https://display.engagesciences.com/display/container/dc/0e15e5bc-cd90-43cf-a5cd-8922d8b5ecd7');
+                console.log("Loading iframe");
+              });
             } else {
-              $("#slide-3-pledge, #close-pledge").fadeIn();
+              $("#slide-3-pledge, #close-pledge").fadeIn(400, function(){
+                $("#form-iframe").attr('src', 'https://display.engagesciences.com/display/container/dc/0e15e5bc-cd90-43cf-a5cd-8922d8b5ecd7');
+                console.log("Loading iframe");
+              });
             }
           });
         });
